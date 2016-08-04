@@ -1,0 +1,25 @@
+server:
+    contextPath: /springboot
+
+logging:
+  level:
+    ROOT: DEBUG
+
+spring:
+  oauth2:
+    client:
+      clientId: 954322110621-28v83tok4v3hg1e7c9167ohpd17bchuq.apps.googleusercontent.com
+      clientSecret: vyNoBS7eZZqhkmtqcDlKhZML
+      accessTokenUri: https://www.googleapis.com/oauth2/v1/tokeninfo
+      userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
+      tokenName: access_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+      scope: https://www.googleapis.com/auth/drive, https://www.googleapis.com/auth/spreadsheets
+    resource:
+      userInfoUri: https://www.googleapis.com/plus/v1/people/me
+      preferTokenInfo: true
+
+  resources:
+    chain:
+      enabled: true
